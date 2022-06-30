@@ -1,0 +1,104 @@
+<Hasil>:
+    MDFloatLayout:
+        md_bg_color: C("#143F6B")
+        orientation: 'vertical'
+    MDFillRoundFlatButton:
+        text: "<"
+        pos_hint: {'center_x': 0.1,'center_y': 0.95}
+        md_bg_color: C("#143F6B")
+        color: 1,0,1,1
+        size_hint: 0.04, 0.04
+        font_name: "BPoppins"
+        font_size: "35sp"
+        on_release: 
+            root.manager.current='travel' 
+            root.manager.transition.direction="right"
+    MDLabel:
+        text: "We found your best route!"
+        halign: "center"
+        pos_hint: {'center_x': 0.5,'center_y': 0.89}
+        font_name: "BPoppins"
+        font_size: "17sp"
+        color: [1, 1, 1, 1]
+    FitImage:
+        source: "./kv/voyage.png"
+        size_hint: (None, None)
+        width: "200sp"
+        height: "200sp"
+        pos_hint: {'center_x': 0.5,'center_y': 0.7}
+    MDLabel: 
+        text: "Origin: "
+        pos_hint: {'center_x': 0.55, 'center_y': 0.5}
+        color: [1, 1, 1, 1]
+        font_name: "MPoppins"
+        font_size: "14sp"
+    MDLabel:
+        id: asal_label
+        text: " "
+        pos_hint: {'center_x': 0.9,'center_y': 0.5}
+        color: [1, 1, 1, 1]
+        font_name: "RPoppins"
+        font_size: "14sp"
+    MDLabel: 
+        text: "Destination: "
+        pos_hint: {'center_x': 0.55, 'center_y': 0.45}
+        color: [1, 1, 1, 1]
+        font_name: "MPoppins"
+        font_size: "14sp"
+    MDLabel:
+        text: "---------------------------------------"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+        color: [1, 1, 1, 1]
+        halign: "center"
+        font_name: "MPoppins"
+        font_size: "14sp"
+    MDLabel:
+        id: destinasi_label
+        text: " "
+        pos_hint: {'center_x': 0.9,'center_y': 0.45}
+        color: [1, 1, 1, 1]
+        font_name: "RPoppins"
+        font_size: "14sp"
+    MDLabel: 
+        text: "Best Price: "
+        pos_hint: {'center_x': 0.55, 'center_y': 0.35}
+        color: [1, 1, 1, 1]
+        font_name: "MPoppins"
+        font_size: "14sp"
+    MDLabel:
+        id: harga_label
+        text: ""
+        pos_hint: {'center_x': 0.65,'center_y': 0.35}
+        size_hint: (None, None)
+        width: "180sp"
+        height: "25sp"
+        color: [1, 1, 1, 1]
+        font_name: "RPoppins"
+        font_size: "14sp"
+    MDLabel: 
+        text: "Route: "
+        pos_hint: {'center_x': 0.55, 'center_y': 0.26}
+        color: [1, 1, 1, 1]
+        font_name: "MPoppins"
+        font_size: "14sp"
+    MDLabel:
+        id: rute_label
+        text: ""
+        pos_hint: {'x': 0.4,'center_y': 0.26}
+        valign: "top"
+        halign: "left"
+        size_hint: (None, None)
+        width: "180sp"
+        height: "25sp"
+        color: [1, 1, 1, 1]
+        font_name: "RPoppins"
+        font_size: "14sp"
+
+    MDFillRoundFlatButton:
+        text: "Generate"
+        pos_hint: {'center_x': 0.5,'center_y': 0.15}
+        md_bg_color: C("#F55353")
+        size_hint: 0.5, 0.07
+        font_name: "BPoppins"
+        font_size: "17sp"
+        on_release: root.generate()
